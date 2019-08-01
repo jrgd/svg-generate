@@ -12,7 +12,7 @@ function svg_insert_rectangle(x,y,width,height, fillStyle) {
 
 
 var shape_echoes=0;
-var scale = 1;
+var scale = 2;
 var line_thickness = 1;
 
       for (var ii = 0; ii < 24; ii += line_thickness) {

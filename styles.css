@@ -27,11 +27,21 @@ section textarea {
   font-family: monospace;
   font-size: 12px;
 }
+section[role='preview'] svg {
+  width: calc(100%);
+  height: calc(100% - 20px);
+  border: 1px dotted black;
+}
 section[role='preview'] div.grid {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 1;
   background-color: transparent; # limegreen; 
   width: calc((100vw - 3px)/2 - (10px * 2));
   height: calc(100% - (10px * 2) );
+}
+section[role='preview'] button[role=clear_svg] {
+  position: relative;
+  z-index: 10;
 }

@@ -10,10 +10,14 @@ $(document).ready(function(){
   // .on('mousemove', function(){
   // })
 
-  $('#generate').on('click', function(){
+  $('button[role=generate]').on('click', function(){
     var code = $('textarea[role=code]').val();
     console.log(code);
     eval(code);
-  })
+  });
+
+  $('button[role=clear_svg]').on('click', function(){
+    $('#svg_canvas').empty();
+  });
 
 })
