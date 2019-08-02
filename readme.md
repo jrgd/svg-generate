@@ -3,6 +3,9 @@ a real time svg code/editor/preview/animator
 
 ### Initial setup
 $ valet link svg-editor
+run in both project-root directory and the src-app directory
+$ yarn
+to install packages
 
 ### Development:
 valet url: http://svg-editor.test
