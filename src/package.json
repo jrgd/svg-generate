@@ -1,0 +1,16 @@
+{
+  "name": "jrgd_svg_generator",
+  "description": "Generate SVG visuals from code",
+  "main": "index.html",
+  "chromium-args": "--disable-raf-throttling",
+  "window": {
+    "icon": "img/icon.png",
+    "height": 800,
+    "resizable": true,
+    "width": 1200,
+    "title": "+ ---===||| SVG |||===--- +"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

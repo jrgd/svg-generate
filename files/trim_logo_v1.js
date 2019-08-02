@@ -1,4 +1,7 @@
-function svg_insert_rectangle(x,y,width,height, fillStyle) {
+      
+
+
+    function svg_insert_rectangle(x,y,width,height, fillStyle) {
     var svgns = 'http://www.w3.org/2000/svg';
     var rect = document.createElementNS(svgns, 'rect');
       rect.setAttributeNS(null, 'x', x);
@@ -12,8 +15,8 @@ function svg_insert_rectangle(x,y,width,height, fillStyle) {
 
 
 var shape_echoes=0;
-var scale = 2;
-var line_thickness = 1;
+var scale = 5;
+var line_thickness = 1.65;
 
       for (var ii = 0; ii < 24; ii += line_thickness) {
 
@@ -35,7 +38,7 @@ var line_thickness = 1;
         // t horizontal
         x = (0 + ii)*scale,
             y = (47+3 + ii)*scale,
-            width = ((47*2-3) - ii*2)*scale,
+            width = ((47*2) - ii*2)*scale,
             height = (47 - ii*2)*scale;
         svg_insert_rectangle(x,y,width,height, fillStyle);
 

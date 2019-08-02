@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "jquery": "^3.4.1"
+  "scripts": {
+    "start": "node index.js",
+    "start-nw": "nw --disable-raf-throttling"
+  },
+  "devDependencies": {
+    "express": "^4.16.4",
+    "nw": "0.40.0"
   }
 }
