@@ -1,11 +1,11 @@
 {
-  "name": "jrgd_svg_generator",
+  "name": "SVG Generator",
   "description": "Generate SVG visuals from code",
   "main": "index.html",
   "chromium-args": "--disable-raf-throttling",
   "window": {
     "icon": "img/icon.png",
-    "height": 800,
+    "height": 600,
     "resizable": true,
     "width": 1200,
     "title": "+ ---===||| SVG |||===--- +"

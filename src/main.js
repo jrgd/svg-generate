@@ -20,4 +20,31 @@ $(document).ready(function(){
     $('#svg_canvas').empty();
   });
 
+
+  function chooseFile(name) {
+      var chooser = $(name);
+      chooser.unbind('change');
+      chooser.change(function(evt) {
+
+        // Read file with Node.js API
+        var fs = nw.require('fs');
+        var path = $(this).val();
+        fs.readFile(path, 'utf8', function(err, txt) {
+          if (err) {
+            console.error(err);
+            return;
+          }
+
+          $('textarea[role=code]').val( txt );
+        });
+      });
+
+      chooser.trigger('click');  
+    }
+    
+
+  $('button[role=load]').on('click', function(){
+    chooseFile('#fileDialog');
+  })
+
 })

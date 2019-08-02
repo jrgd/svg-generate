@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>+ ---===||| SVG.generate |||===--- +</title>
+  <title>SVG.generate</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="./main.js"></script>
@@ -15,7 +15,10 @@
 
 
     </textarea>
+    
+    <button role='load'>Load</button>
     <button role='generate'>Run</button>
+    <input style="display:none;" id="fileDialog" type="file" accept='.js,.svg'/>
   </section>
   <section role='preview'>
     <svg id='svg_canvas' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice" viewBox='0 0 1000 1000'>
