@@ -1,6 +1,6 @@
 {
   "name": "SVG Generator",
-  "description": "Generate SVG visuals from code",
+  "description": "a tool to generate SVG from javascript",
   "main": "index.html",
   "chromium-args": "--disable-raf-throttling",
   "window": {
