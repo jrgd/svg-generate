@@ -21,7 +21,12 @@ $(document).ready(function(){
   });
 
 
-  function chooseFile(name) {
+      
+
+  $('button[role=load]').on('click', function(){
+    loadFile('#fileDialog');
+  });
+  function loadFile(name) {
       var chooser = $(name);
       chooser.unbind('change');
       chooser.change(function(evt) {
@@ -40,11 +45,16 @@ $(document).ready(function(){
       });
 
       chooser.trigger('click');  
-    }
-    
+  }
 
-  $('button[role=load]').on('click', function(){
-    chooseFile('#fileDialog');
-  })
-
+  $('button[role=save]').on('click', function(){
+    saveFile('#fileDialog');
+  });
+  function saveFile(name) {
+    // ideally we should check if something is in the ghost-input, if there is nothing, it's a new file and we need to input the filename
+    var fs = nw.require('fs');
+    var path = $(name).val();
+    var code = $('textarea[role=code]').val();
+    fs.writeFileSync(path, code);
+  }
 })
