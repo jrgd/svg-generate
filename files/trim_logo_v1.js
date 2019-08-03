@@ -15,8 +15,8 @@
 
 
 var shape_echoes=0;
-var scale = 2;
-var line_thickness = 1.65;
+var scale = 1;
+var line_thickness = 2;
 
       for (var ii = 0; ii < 24; ii += line_thickness) {
 
