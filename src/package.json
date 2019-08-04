@@ -8,9 +8,10 @@
     "height": 600,
     "resizable": true,
     "width": 1200,
-    "title": "+ ---===||| SVG |||===--- +"
+    "title": "SVG Generator"
   },
   "dependencies": {
+    "file-saver": "^2.0.2",
     "jquery": "^3.4.1"
   }
 }

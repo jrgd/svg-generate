@@ -4,6 +4,7 @@
   <title>SVG.generate</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/file-saver/dist/FileSaver.min.js"></script>
   <script type="text/javascript" src="./main.js"></script>
   <script type="text/javascript" src="./svg-generate-library.js"></script>
 </head>
@@ -23,10 +24,13 @@
     <input style="display:none;" id="fileDialog" type="file" accept='.js,.svg'/>
   </section>
   <section role='preview'>
-    <svg id='svg_canvas' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice" viewBox='0 0 1000 1000'>
-    </svg>
+    <div id='svg_container'>
+      <svg id='svg_canvas' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice" viewBox='0 0 1000 1000'>
+      </svg>
+    </iv>
     <div class='grid'></div>
     <button role='clear_svg'>Clear</button>
+    <button role='save_svg'>Save</button>
   </section>
 </main>
 

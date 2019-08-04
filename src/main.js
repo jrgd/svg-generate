@@ -48,7 +48,7 @@ $(document).ready(function(){
       chooser.trigger('click');  
   }
 
-  $('button[role=save]').on('click', function(){
+  $('button[role=save_svg]').on('click', function(){
     saveFile('#fileDialog');
   });
   function saveFile(name) {
@@ -58,6 +58,13 @@ $(document).ready(function(){
     var code = $('textarea[role=code]').val();
     fs.writeFileSync(path, code);
   }
+
+  $('button[role=save_svg]').on('click', function(){
+    // $('#svg_canvas')
+    var content =  $('#svg_container').html();
+    var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "generated.svg");
+  });
 })
 
 

@@ -33,6 +33,7 @@ section[role='preview'] svg {
   border: 1px dotted black;
 }
 section[role='preview'] div.grid {
+  display: none;
   position: absolute;
   top: 10px;
   left: 10px;
