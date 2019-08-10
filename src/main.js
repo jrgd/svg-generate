@@ -15,9 +15,7 @@ $(document).ready(function(){
   });
 
   $('button[role=generate]').on('click', function(){
-    $('button[role=clear_svg]').trigger('click');
-    var code = $('textarea[role=code]').val();
-    eval(code);
+    generate_svg();
   });
 
   $('button[role=clear_svg]').on('click', function(){
@@ -67,6 +65,13 @@ $(document).ready(function(){
   });
 })
 
+
+// ACTIONS
+function generate_svg() {
+  $('button[role=clear_svg]').trigger('click');
+  var code = $('textarea[role=code]').val();
+  eval(code);
+}
 
 // Limted Eval in time
 // http://cwestblog.com/2016/03/16/javascript-detecting-infinite-loops/
