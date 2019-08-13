@@ -12,18 +12,22 @@
 
 <main>
   <section role='editor'>
-    <textarea role='code'>
+    <div role='code_container'>
+      <textarea role='code'>
       
 
 
-    </textarea>
-    <div id='controls'>
-      
+      </textarea>
     </div>
-    <button role='load'>Load</button>
-    <button role='save'>Save</button>
-    <button role='generate'>Run</button>
-    <input style="display:none;" id="fileDialog" type="file" accept='.js,.svg'/>
+    <div role='interface_container'>
+      <div id='controls'>
+        
+      </div>
+      <button role='load'>Load</button>
+      <button role='save'>Save</button>
+      <button role='generate'>Run</button>
+      <input style="display:none;" id="fileDialog" type="file" accept='.js,.svg'/>
+    </div>
   </section>
   <section role='preview'>
     <div id='svg_container'>
