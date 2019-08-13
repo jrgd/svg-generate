@@ -11,15 +11,17 @@ $(document).ready(function(){
   // })
 
   $('textarea[role=code]').on('keyup', function(){
+    $('#controls').empty();
     $('button[role=generate]').trigger('click');
   });
 
   $('button[role=generate]').on('click', function(){
+    clear_screen();
     generate_svg();
   });
 
   $('button[role=clear_svg]').on('click', function(){
-    $('#svg_canvas').empty();
+    clear_screen(); 
   });
 
   $('button[role=load]').on('click', function(){
@@ -70,7 +72,13 @@ $(document).ready(function(){
 function generate_svg() {
   $('button[role=clear_svg]').trigger('click');
   var code = $('textarea[role=code]').val();
+
   eval(code);
+}
+
+function clear_screen() {
+  $('#svg_canvas').empty();
+  // $('#controls').empty();
 }
 
 // Limted Eval in time
