@@ -7,8 +7,6 @@ $(document).ready(function(){
     click_pos_y = e.pageY - $(this).offset().top;
     console.log(click_pos_x, click_pos_y);
   })
-  // .on('mousemove', function(){
-  // })
 
   $('textarea[role=code]').on('keyup', function(){
     $('#controls').empty();
