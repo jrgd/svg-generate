@@ -6,8 +6,14 @@
 ## SVG
   - svg_insert_rectangle
     will insert a rectangle at a x,y position with width and height dimensions and fillStyle
+  - generate_svg
+  - clear_screen
 ## Interface
   - get_slider_value
+  - saveFile_code_temp
+    in node-webkit, saves the code on each keyup
+  - saveFile
+  - loadFile
 ## Conversions
   - number_to_hex
     converts a range from DEC 0-255 into HEX 00-FF
@@ -27,6 +33,17 @@ function svg_insert_rectangle(x,y,width,height, fillStyle) {
     rect.setAttributeNS(null, 'fill', fillStyle);
   document.getElementById('svg_canvas').appendChild(rect);
 }
+function generate_svg() {
+  $('button[role=clear_svg]').trigger('click');
+  var code = $('textarea[role=code]').val();
+
+  eval(code);
+}
+function clear_screen() {
+  $('#svg_canvas').empty();
+  // $('#controls').empty();
+}
+
 
 function get_slider_value(label, id, min_value, max_value) {
   // check if ele ID exists
@@ -77,6 +94,41 @@ function get_slider_value(label, id, min_value, max_value) {
     var slided_value = $('#'+id).val();
     return parseInt(slided_value);
   }
+}
+function saveFile_code_temp() {
+  // ideally we should check if something is in the ghost-input, if there is nothing, it's a new file and we need to input the filename
+  var fs = nw.require('fs');
+  var path = "_temp.js"; //+$(name).val();//$(name).val();
+  alert(path);
+  var code = $('textarea[role=code]').val();
+  fs.writeFileSync(path, code);
+}
+function saveFile(name) {
+  // ideally we should check if something is in the ghost-input, if there is nothing, it's a new file and we need to input the filename
+  var fs = nw.require('fs');
+  var path = $(name).val();
+  var code = $('textarea[role=code]').val();
+  fs.writeFileSync(path, code);
+}
+function loadFile(name) {
+    var chooser = $(name);
+    chooser.unbind('change');
+    chooser.change(function(evt) {
+
+      // Read file with Node.js API
+      var fs = nw.require('fs');
+      var path = $(this).val();
+      fs.readFile(path, 'utf8', function(err, txt) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        $('textarea[role=code]').val( txt );
+      });
+    });
+
+    chooser.trigger('click');  
 }
 
 function number_to_hex(decimal, padding=2) {
