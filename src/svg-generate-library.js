@@ -99,7 +99,7 @@ function saveFile_code_temp() {
   // ideally we should check if something is in the ghost-input, if there is nothing, it's a new file and we need to input the filename
   var fs = nw.require('fs');
   var path = "_temp.js"; //+$(name).val();//$(name).val();
-  alert(path);
+  // alert(path);
   var code = $('textarea[role=code]').val();
   fs.writeFileSync(path, code);
 }
