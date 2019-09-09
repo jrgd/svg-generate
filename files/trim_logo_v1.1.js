@@ -1,8 +1,8 @@
 var shape_echoes=0;
 var scale = 1;
-var line_thickness = 1;
-var iterations_qu = 26;
-var gap = 4;
+var line_thickness = 5;
+var iterations_qu = 53;
+var gap = 8;
 var base_unit = iterations_qu * 2 + gap; // 53px for 25 iter.
 
 // T vertical
