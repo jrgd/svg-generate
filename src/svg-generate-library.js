@@ -45,7 +45,11 @@ function clear_screen() {
 }
 
 
-function get_slider_value(label, id, min_value, max_value) {
+function get_slider_value(label, id, min_value, max_value, default_value = undefined) {
+
+  if (default_value === undefined) {
+    default_value = min_value;
+  }
   // check if ele ID exists
   if  ( $('#'+id).length > 0) {
     // exists
@@ -71,7 +75,7 @@ function get_slider_value(label, id, min_value, max_value) {
         'id': id,
         'class': 'slider'
       })
-      .val(min_value)
+      .val(default_value)
       .on('change', function(){
         // update display of the value
         var display_element_name = '#'+$(this).attr('id')+'_output';
