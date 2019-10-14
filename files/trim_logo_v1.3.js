@@ -3,7 +3,7 @@ var shape_echoes=0;
 var scale = get_slider_value('Scale', 'scale', 1, 20);
 var line_thickness = get_slider_value('Line thickness', 'line_thickness', 1, 20, 5);
 var iterations_qu = get_slider_value('Iterations', 'iterations_qu', 1, 100, 53);
-var gap = get_slider_value('Ga', 'gap', 1, 20);;
+var gap = get_slider_value('Ga', 'gap', 1, 20);
 var base_unit = scale * (gap + iterations_qu * line_thickness); // 53px for 25 iter.
 
 // Origins
