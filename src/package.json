@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "file-saver": "^2.0.2",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
