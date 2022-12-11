@@ -4,7 +4,7 @@
     "start-nw": "nw --disable-raf-throttling"
   },
   "devDependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "nw": "0.40.0"
   }
 }
